@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Projected Particle Theory — a preliminary speculative conceptual framework by Dharmesh Choudhary.">
+  <meta name="theme-color" content="#0b1020">
+  <title>Projected Particle Theory | Dharmesh Choudhary</title>
+  <style>
+    :root {
+      --bg: #080d1b; --panel: #111a2e; --panel2: #15213a;
+      --text: #edf3ff; --muted: #aab8d2; --accent: #83b8ff;
+      --accent2: #b9a5ff; --line: rgba(180,205,255,.16);
+      --warning: #f4d38b; --max: 1080px;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; scroll-padding-top: 88px; }
+    body {
+      margin: 0; font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: var(--text); line-height: 1.7;
+      background: radial-gradient(ellipse at top right, #17264a 0, transparent 42%), var(--bg);
+    }
+    a { color: var(--accent); }
+    .nav {
+      position: sticky; top: 0; z-index: 10; backdrop-filter: blur(16px);
+      background: rgba(8,13,27,.88); border-bottom: 1px solid var(--line);
+    }
+    .nav-inner { max-width: var(--max); margin: auto; padding: 12px 22px; display:flex; justify-content:space-between; gap:18px; align-items:center; }
+    .brand { font-weight: 800; letter-spacing:.04em; font-size:.93rem; }
+    .nav-links { display:flex; flex-wrap:wrap; gap:14px; font-size:.88rem; }
+    .nav-links a { color:var(--muted); text-decoration:none; }
+    .nav-links a:hover { color:white; }
+    .hero { max-width:var(--max); margin:auto; padding:86px 22px 62px; }
+    .eyebrow { color:var(--accent); text-transform:uppercase; letter-spacing:.16em; font-size:.78rem; font-weight:800; }
+    h1 { font-size:clamp(2.5rem, 7vw, 5.2rem); line-height:1.04; letter-spacing:-.045em; max-width:900px; margin:18px 0; }
+    .subtitle { font-size:clamp(1.05rem, 2vw, 1.35rem); color:#c5d3ee; max-width:800px; }
+    .byline { color:var(--muted); margin-top:26px; }
+    .badge { display:inline-block; margin-top:20px; border:1px solid rgba(244,211,139,.35); color:var(--warning); background:rgba(244,211,139,.08); border-radius:999px; padding:7px 13px; font-size:.88rem; }
+    .actions { display:flex; flex-wrap:wrap; gap:12px; margin-top:28px; }
+    .btn { display:inline-block; padding:11px 17px; border-radius:12px; text-decoration:none; font-weight:750; border:1px solid var(--line); }
+    .btn-primary { color:#071225; background:linear-gradient(120deg,var(--accent),var(--accent2)); border:0; }
+    .btn-secondary { color:var(--text); background:rgba(255,255,255,.04); }
+    main { max-width:var(--max); margin:auto; padding:0 22px 70px; }
+    .grid { display:grid; grid-template-columns:repeat(12,1fr); gap:18px; }
+    .card { background:linear-gradient(145deg,rgba(21,33,58,.92),rgba(13,21,39,.92)); border:1px solid var(--line); border-radius:20px; padding:25px; margin-bottom:18px; }
+    .span-12 { grid-column:span 12; } .span-6 { grid-column:span 6; }
+    h2 { font-size:clamp(1.55rem,3vw,2.1rem); letter-spacing:-.025em; line-height:1.2; margin:0 0 17px; }
+    h3 { margin:22px 0 8px; font-size:1.1rem; color:#dbe7ff; }
+    p { margin:0 0 14px; color:#d0daed; }
+    .muted { color:var(--muted); }
+    .keywords { color:var(--muted); font-size:.93rem; }
+    .number { display:inline-grid; place-items:center; width:34px; height:34px; border-radius:10px; margin-right:8px; background:rgba(131,184,255,.13); color:var(--accent); font-weight:800; }
+    ul { color:#d0daed; padding-left:22px; } li { margin:9px 0; }
+    .callout { border-left:3px solid var(--accent); padding:13px 17px; background:rgba(131,184,255,.07); border-radius:0 12px 12px 0; }
+    .warning { border-left-color:var(--warning); background:rgba(244,211,139,.07); }
+    .table-wrap { overflow-x:auto; }
+    table { width:100%; border-collapse:collapse; min-width:520px; }
+    th,td { text-align:left; padding:13px 12px; border-bottom:1px solid var(--line); vertical-align:top; }
+    th { color:var(--accent); font-size:.9rem; }
+    td { color:#d0daed; }
+    footer { border-top:1px solid var(--line); color:var(--muted); text-align:center; padding:28px 20px 38px; font-size:.9rem; }
+    .top-link { float:right; text-decoration:none; font-size:.85rem; }
+    @media (max-width:700px) {
+      .nav-inner { align-items:flex-start; flex-direction:column; gap:7px; }
+      .nav-links { gap:10px; }
+      .hero { padding-top:55px; }
+      .span-6 { grid-column:span 12; }
+      .card { padding:20px; border-radius:16px; }
+    }
+    @media print {
+      body { background:white; color:#111; }
+      .nav,.actions { display:none; }
+      .card { background:white; border:1px solid #ddd; break-inside:avoid; }
+      p,li,td { color:#222; }
+      h1,h2,h3 { color:#111; }
+    }
+  </style>
+</head>
+<body>
+  <nav class="nav" aria-label="Main navigation">
+    <div class="nav-inner">
+      <div class="brand">PROJECTED PARTICLE THEORY</div>
+      <div class="nav-links">
+        <a href="#abstract">Abstract</a><a href="#postulates">Core Ideas</a><a href="#transition">Transition</a>
+        <a href="#physics">Known Physics</a><a href="#questions">Open Questions</a><a href="#roadmap">Next Steps</a>
+      </div>
+    </div>
+  </nav>
+
+  <header class="hero" id="top">
+    <div class="eyebrow">Preliminary Conceptual Research Draft · October 2026</div>
+    <h1>Projected<br>Particle Theory</h1>
+    <p class="subtitle">A speculative conceptual framework for universe-specific particle codes, reality stability, and hypothetical multiverse transitions.</p>
+    <div class="byline">Proposed by <strong>Dharmesh Choudhary</strong></div>
+    <div class="badge">Status: Hypothesis only — not experimentally verified</div>
+    <div class="actions">
+      <a class="btn btn-primary" href="#abstract">Explore the concept ↓</a>
+      <button class="btn btn-secondary" onclick="window.print()">Print / Save as PDF</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="grid">
+      <article class="card span-12" id="abstract">
+        <h2><span class="number">01</span>Abstract</h2>
+        <p>The Projected Particle Theory (PPT), as proposed here, hypothesizes that reality may be associated with extremely small, individually unobservable entities called <strong>projected particles</strong>. The proposal suggests that many such particles form a closely packed collective structure, with negligible inter-particle distance, and that this structure underlies the observable universe.</p>
+        <p>It further hypothesizes that each possible universe has a distinct particle code or arrangement, which helps define that universe’s physical reality. A hypothetical <strong>Super Projected Particle</strong> is proposed as a common element that could be associated with multiple universes. The model also speculates that disturbing a universe-specific code or arrangement could destabilize reality, and that a controlled transition between universes would require some way of managing these interactions.</p>
+        <div class="callout warning"><strong>Scientific status:</strong> These claims are conceptual and currently lack mathematical formulation, experimental evidence, and a known physical mechanism. This page presents a hypothesis for discussion, not an established scientific discovery.</div>
+        <p class="keywords"><strong>Keywords:</strong> projected particles, particle code, reality structure, multiverse hypothesis, superposition, Super Projected Particle, speculative physics.</p>
+      </article>
+    </section>
+
+    <section class="card" id="introduction">
+      <h2><span class="number">02</span>Introduction</h2>
+      <p>The Projected Particle Theory is a speculative conceptual model intended to explore whether the observable universe could be understood as the collective structure or projection of smaller, individually invisible entities. The idea was developed while reflecting on fictional multiverse concepts, including those presented in the television series <em>Dark Matter</em> (2024). The series serves as inspiration, not scientific evidence.</p>
+      <p>The central proposal is that the structure of a universe depends on the collective arrangement and a universe-specific code associated with its projected particles. Different hypothetical universes, such as “Earth 401” and “Earth 502,” would have different codes. The proposal asks whether such differences could explain why each universe has its own consistent reality and why transitioning between them, if possible, might require a special mechanism.</p>
+    </section>
+
+    <section class="card" id="postulates">
+      <h2><span class="number">03</span>Core Postulates of the Proposed Model</h2>
+      <h3>3.1 Individual projected particles</h3>
+      <p>Projected particles are hypothesized to be extremely small and individually invisible. Their existence is a postulate of this model, not an established discovery. The proposal treats them as more fundamental than ordinary visible structures, but it does not yet specify their mass, charge, spin, energy, or other measurable properties.</p>
+      <h3>3.2 Collective structure and negligible separation</h3>
+      <p>The model proposes that projected particles occur in very dense groups, with inter-particle distances that are negligible within the proposed framework. The collective structure, rather than an individual particle, is hypothesized to be associated with the visible universe. This is a conceptual claim: it does not yet explain how visibility, light, or matter would emerge from the proposed arrangement.</p>
+      <h3>3.3 Universe-specific codes</h3>
+      <p>Each hypothetical universe is proposed to have a distinct projected-particle code or arrangement. “Earth 401” represents one possible universe and “Earth 502” another. Their codes would differ, and those differences would correspond to the rules or conditions of each universe. The model has not yet defined what a code physically consists of, where it is stored, or how particles interact with it.</p>
+      <h3>3.4 The Super Projected Particle</h3>
+      <p>The author proposes a hypothetical entity called the Super Projected Particle, which could be common to, or linked with, more than one universe. In the model, it might provide a shared connection during a hypothetical transition between universes. Its physical properties and the meaning of being “common” across universes remain undefined.</p>
+      <h3>3.5 Reality stability and code disturbance</h3>
+      <p>The model hypothesizes that a universe’s stable reality depends on the integrity of its projected-particle code or arrangement. A disturbance could, according to the proposal, lead to a breakdown of the usual reality structure or a superposition-like condition. This is not a result established by quantum mechanics; the model would need to define “disturbance,” “reality breakdown,” and “superposition” precisely.</p>
+    </section>
+
+    <section class="grid" id="transition">
+      <article class="card span-6">
+        <h2><span class="number">04</span>Hypothetical Multiverse Transition</h2>
+        <p>The proposal asks whether a transition between universes could occur if the interaction between a person and their original universe’s projected-particle arrangement were altered. The author has considered a special containment cube and a drug that temporarily diffuses brain electrical signals as possible fictional mechanisms.</p>
+        <div class="callout warning"><strong>Important safety note:</strong> These are speculative narrative concepts, not known technologies or safe experimental methods. No drug should be developed or used on the basis of this idea, and interrupting brain activity is not known to enable travel between realities.</div>
+      </article>
+      <article class="card span-6">
+        <h2>Compatibility idea</h2>
+        <p>In the proposed scenario, a transition would need to avoid an incompatible interaction between the particle code of the originating universe and that of the destination universe. The Super Projected Particle is suggested as a possible common link.</p>
+        <p>However, no known mechanism makes this process physically possible. The concept currently remains a speculative thought experiment.</p>
+      </article>
+    </section>
+
+    <section class="card" id="physics">
+      <h2><span class="number">05</span>Relationship to Established Physics</h2>
+      <p>Some themes in the proposal resemble broad questions studied in physics, but resemblance does not establish equivalence.</p>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Topic</th><th>Established understanding</th><th>Status in this proposal</th></tr></thead>
+          <tbody>
+            <tr><td>Collective behaviour</td><td>Statistical physics studies systems made of many components; emergence describes collective properties.</td><td>The proposed collective structure has not been defined mathematically.</td></tr>
+            <tr><td>Elementary particles</td><td>Quantum field theory describes known elementary particles and their interactions using fields.</td><td>Projected particles have no confirmed properties or observations.</td></tr>
+            <tr><td>Quantum superposition</td><td>A defined feature of quantum states, not a general synonym for uncertainty or a universe breaking apart.</td><td>The proposed “superposition-like” condition needs a precise definition.</td></tr>
+            <tr><td>Faster-than-light motion</td><td>Modern relativity constrains sending information or ordinary matter faster than light in vacuum.</td><td>No faster-than-light projected particle has been experimentally confirmed.</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p>At present, PPT has no identified particle, mathematical equations, quantitative predictions, or experimental observations that distinguish it from existing models. It should therefore be described as a speculative hypothesis rather than a scientific theory validated by evidence.</p>
+    </section>
+
+    <section class="card" id="questions">
+      <h2><span class="number">06</span>Open Scientific Questions</h2>
+      <ul>
+        <li>What measurable properties define a projected particle, such as energy, mass, charge, or interaction strength?</li>
+        <li>What does the proposed particle “code” physically represent, and how could it be measured?</li>
+        <li>How would the collective arrangement generate or relate to matter, light, space, and time?</li>
+        <li>What does “negligible inter-particle distance” mean quantitatively?</li>
+        <li>What observable result would indicate that a particle code or arrangement had been disturbed?</li>
+        <li>How is the proposed Super Projected Particle different from other proposed particles, and what unique prediction follows from it?</li>
+        <li>What evidence could distinguish this hypothesis from established physics or show that it is incorrect?</li>
+      </ul>
+    </section>
+
+    <section class="card" id="roadmap">
+      <h2><span class="number">07</span>A Responsible Path for Further Development</h2>
+      <p>The next step is not to assume that the proposal is proven, but to make its definitions more precise.</p>
+      <ol>
+        <li><strong>Define the terms:</strong> state each postulate in clear, unambiguous language.</li>
+        <li><strong>Separate assumptions from consequences:</strong> show which statements are starting assumptions and which logically follow from them.</li>
+        <li><strong>Compare with tested physics:</strong> identify possible conflicts with existing observations and established laws.</li>
+        <li><strong>Build a mathematical model:</strong> define measurable quantities and relationships rather than relying only on analogy.</li>
+        <li><strong>Find a falsifiable prediction:</strong> identify an observation that could, in principle, show the proposal is wrong.</li>
+        <li><strong>Seek feedback:</strong> discuss the concept with a physics teacher, mentor, or qualified researcher.</li>
+      </ol>
+      <div class="callout warning">Any proposed test should be theoretical or use established, safe scientific methods. Human drug experiments or attempts to disrupt brain activity are not appropriate.</div>
+    </section>
+
+    <section class="card" id="conclusion">
+      <h2><span class="number">08</span>Conclusion</h2>
+      <p>The Projected Particle Theory is an original speculative framework proposed by Dharmesh Choudhary. It brings together the ideas of individually invisible particles, a dense collective structure, universe-specific codes, a hypothetical Super Projected Particle, and possible reality instability following code disturbance.</p>
+      <p>Its current value is as a clearly stated concept that can be questioned, refined, and compared with known physics. At present, it is not experimentally supported, and its multiverse-transition mechanism is not established. Further progress would require precise definitions, a coherent physical mechanism, and testable predictions.</p>
+    </section>
+
+    <section class="card" id="scope">
+      <h2>References &amp; Scope Note</h2>
+      <p>This page is a conceptual write-up based on the author’s description of the hypothesis. It is not a peer-reviewed paper and does not claim experimental confirmation. For background reading, consult introductory materials on quantum mechanics, quantum field theory, special relativity, and the philosophy of scientific testing. The television series <em>Dark Matter</em> (2024) is a fictional inspiration only.</p>
+    </section>
+  </main>
+
+  <footer>
+    <div><strong>Projected Particle Theory</strong> · Proposed by Dharmesh Choudhary · October 2026</div>
+    <div>Speculative conceptual framework — not experimentally verified.</div>
+    <div style="margin-top:10px"><a href="#top">Back to top ↑</a></div>
+  </footer>
+</body>
+</html>
